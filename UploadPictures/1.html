@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+</head>
+<body>
+    
+    <input type="file" onchange="previewImage(this)"  id="previewImg">
+
+    <img id="imghead" border="0" src=""  >
+    
+
+ <script>
+        function previewImage(file){
+          var MAXWIDTH  = 190; 
+          var MAXHEIGHT = 190;
+          if (file.files && file.files[0]){
+              var img = document.getElementById('imghead');
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight); //最大宽 ，最大高 ，宽 ，高
+                img.width  =  rect.width;
+                img.height =  rect.height;
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+        }
+
+        function clacImgZoomParam(maxW, maxH, width, height ){ //最大宽 ，最大高 ，宽 ，高
+            var param = {'top':0, 'left':0, 'width':width, 'height':height};
+            if( width > maxW || height > maxH ){
+                var rateWidth = width / maxW;
+                var rateHeight = height / maxH;
+                if( rateWidth > rateHeight){
+                    param.width =  maxW;
+                    param.height = Math.round(height / rateWidth);
+                }else{
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxH;
+                }
+            }
+            param.left = Math.round((maxW- param.width) / 2);
+            param.top = Math.round((maxH - param.height) / 2);
+            return param;
+        }
+    </script>
+
+
+
+<script>
+  
+  document.querySelector("#imghead").onclick = function(){
+
+  }
+</script>
+
+</body>
+</html>

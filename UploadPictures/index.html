@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi"> 
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+   
+</head>
+<body>
+	<div class="content">
+	     <div class="UGC_box">
+       
+              <div class="plus_box">
+                <div class="plus_tu">
+                  <div id='imgCont'><img src="img/plus.jpg" alt=""></div>
+                  <input id="file" type="file" name="" value="">
+                </div>
+              </div>
+
+       </div>
+</div>
+
+
+<script src="js/MKupImages.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+// 上传图片
+var upImages = new MKupImages({
+  autoSize: true,
+  width: 750,  // 最大宽度  autoSize: true
+  height: 900, // 最大高度  autoSize: true
+  inputElem: '#file',
+  boxElem: '#imgCont',
+  cmpGrade: 0.6, //压缩图片
+  multiple: false,
+  upCallback: function(dataurl){
+    document.getElementById("imgCont").innerHTML = "";
+    var oImg = new Image();
+    oImg.src = dataurl;
+    this.boxElem.appendChild(oImg);
+    oImg.onload = function(){ //一定要这一步
+      console.log('显示成功');
+    };
+    //alert(ImgW);
+    //alert(ImgH);
+  }
+});
+
+
+</script> 
+</body>
+</html>	
+
