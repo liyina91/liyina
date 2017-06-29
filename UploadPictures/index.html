@@ -2,21 +2,26 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	 <meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi">
-    <title></title>
-		<style>
-			input{margin:40px;width:300px;}
-		</style>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-		<!-- <link rel="stylesheet" href="https://github.com/robnyman/robnyman.github.com/blob/master/camera-api/css/base.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1 maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+  <title>demo</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+	<!-- <link rel="stylesheet" href="https://github.com/robnyman/robnyman.github.com/blob/master/camera-api/css/base.css"> -->
+	<style>
+		body{min-width: 320px;}
+		input{padding:5px;width:auto;display: block;}
+		a{padding: 5px;display: block;height: 40px;line-height: 40px;border:1px solid #ccc;margin-bottom: 5px;}
+	</style>
 </head>
 <body>
 
 		<input id="file2" type="file" name="" value=""><br>
 		<input type="file" accept="image/*;capture=camera"><br>
 		<input type="file" accept="video/*;capture=camcorder"><br>
-		<input type="file" accept="audio/*;capture=microphone">
-
+		<input type="file" accept="audio/*;capture=microphone"><br>
+		 <a href="ddcash://h5demo/get/info?id=10000">open Android app</a>
 	<div class="content">
 	     <div class="UGC_box">
               <div class="plus_box">
@@ -26,6 +31,7 @@
                 </div>
               </div>
        </div>
+
 </div>
 <!-- <div class="container">
 					 <h1>Camera API</h1>
@@ -57,8 +63,8 @@
 // 上传图片
 var upImages = new MKupImages({
   autoSize: true,
-  width: 750,  // 最大宽度  autoSize: true
-  height: 900, // 最大高度  autoSize: true
+  width: 158,  // 最大宽度  autoSize: true
+  height: 158, // 最大高度  autoSize: true
   inputElem: '#file',
   boxElem: '#imgCont',
   cmpGrade: 0.6, //压缩图片
