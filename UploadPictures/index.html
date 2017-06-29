@@ -12,7 +12,9 @@
 	<style>
 		body{min-width: 320px;}
 		input{padding:5px;width:auto;display: block;}
-		a{padding: 5px;display: block;height: 40px;line-height: 40px;border:1px solid #ccc;margin-bottom: 5px;}
+		.cover{position: fixed;width:100%;height:100%;top:0;left:0;background: rgba(0,0,0,.8);display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;display: none;}
+		a{padding: 5px;display: block;height: 40px;line-height: 40px;border:1px solid #ccc;margin-bottom: 5px;background: #ff8100;}
+		.cover.show{display: -webkit-box;}
 	</style>
 </head>
 <body>
@@ -21,7 +23,7 @@
 		<input type="file" accept="image/*;capture=camera"><br>
 		<input type="file" accept="video/*;capture=camcorder"><br>
 		<input type="file" accept="audio/*;capture=microphone"><br>
-		 <a href="ddcash://h5demo/get/info?id=10000">open Android app</a>
+
 	<div class="content">
 	     <div class="UGC_box">
               <div class="plus_box">
@@ -32,6 +34,9 @@
               </div>
        </div>
 
+</div>
+<div class="cover" id="cover">
+	<a href="ddcash://h5demo/get/info?id=10000">open Android app</a>
 </div>
 <!-- <div class="container">
 					 <h1>Camera API</h1>
@@ -74,8 +79,9 @@ var upImages = new MKupImages({
     var oImg = new Image();
     oImg.src = dataurl;
     this.boxElem.appendChild(oImg);
+		document.getElementById('cover').style.display = '-webkit-box';
     oImg.onload = function(){ //一定要这一步
-      alert('上传成功');
+			alert('上传成功');
     };
     //alert(ImgW);
     //alert(ImgH);
