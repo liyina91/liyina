@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>支付</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // 1rem 20px
+        window.onload = function(){
+            getRem(750,20);
+        };
+        window.onresize = function(){
+            getRem(750,20)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+    </script>
+</head>
+<body>
+    <div class="ui_wrap ui_pay_wrap">
+        <header class="ui_header">
+            <a class="ui_back" href="loanSupermarket.html"></a>
+        </header>
+        <img src="" alt="">
+    </div>
+</body>
+</html>

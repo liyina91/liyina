@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>贷款俱乐部</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="ui_wrap">
+        <header class="ui_header">
+            <!-- <a class="ui_back"></a> -->
+            <div>贷款俱乐部</div>
+        </header>
+        <section class="ui_pageinfo">
+            <img class="ui_img_toptt" width="76%" src="images/img_top_title@2x.png" alt="贷款诚信俱乐部">
+            <img class="ui_img_top" src="images/img_top@2x.png">
+            <ul class="ui_list">
+                <li>
+                    <i class="ui_icon ui_icon1"></i>
+                    <dl>
+                        <dt>2W额度</dt>
+                        <dd>获得20000元额度券</dd>
+                    </dl>
+                </li>
+                <li>
+                    <i class="ui_icon ui_icon2"></i>
+                    <dl>
+                        <dt>必定放款</dt>
+                        <dd>提现百分百放款</dd>
+                    </dl>
+                </li>
+                <li>
+                    <i class="ui_icon ui_icon3"></i>
+                    <dl>
+                        <dt>加速额度</dt>
+                        <dd>随时随地不缺钱</dd>
+                    </dl>
+                </li>
+                <li>
+                    <i class="ui_icon ui_icon4"></i>
+                    <dl>
+                        <dt>费用退还</dt>
+                        <dd>仅钻石会员</dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="ui_vip_pay">
+                <dl>
+                    <dt>白金会员199元/年</dt>
+                    <dd><img src="images/img_vip1@2x.png"></dd>
+                </dl>
+                <dl>
+                    <dt>钻石会员299元/年</dt>
+                    <dd><img src="images/img_vip2@2x.png"></dd>
+                </dl>
+            </div>
+            <div class="ui_vip_form">
+                <div class="ui_form_tt">会员激活</div>
+                <div class="ui_form_list">
+                    <input type="text" id="ipt-payNum" class="ui_ipt" placeholder="请输入微信支付单号">
+                    <input type="tel" id="ipt-tel" class="ui_ipt" placeholder="请输入手机号">
+                    <button class="ui_btn" id="Btn" onclick="dialogShow()">激活会员，领两万额度券</button>
+                </div>
+            </div>
+            <div class="ui_info">
+                <h2 class="vip_infott">会员资格说明</h2>
+                <p class="col6">1.付款成功后凭微信转账单号和手机号领取2万额度券，并激活会员。</p>
+                <p class="col6">2.白金会员和钻石会员在会员期间内借款，免收借款手续费。</p>
+                <p class="col6">3.钻石会员在会员期限内有效借款笔数累计满8笔且无任何逾期，则会员期限到期后，已支付的会员费将会退还。</p>
+                <p class="col6">4.会员期限内，如果会员因自身原因发生严重逾期，平台将不予退款.</p>
+                <p class="col6">5.有问题凭微信转账单号联系客服，客服微信：<span class="red">chengxinclub</span>。</p>
+                
+                <div class="ui_tip">领取额度券后，下载下列app使用</div>
+                <p class="tac bold" style="color: #484F60;">不出额度，双倍退款</p>
+                <ul class="ui_ewmlist">
+                    <li>
+                        <div class="ui-ewmline"><img src="images/img_top@2x.png"></div>
+                        <p>信而富</p>
+                    </li>
+                    <li>
+                        <div class="ui-ewmline"><img src="images/bg_erweima@2x.png"></div>
+                        <p>信而富</p>
+                    </li>
+                    <li>
+                        <div class="ui-ewmline"><img src="images/bg_erweima@2x.png"></div>
+                        <p>信而富</p>
+                    </li>
+                    <li>
+                        <div class="ui-ewmline"><img src="images/bg_erweima@2x.png"></div>
+                        <p>信而富</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 弹出窗 -->
+        <div class="ui_dialog" id="dialogWrap">  
+            <div class="ui_dialog_cnt">
+                <div class="ui_dialog_info">
+                    <h2>提示</h2>
+                    <p>请输入正确微信转账单号和手机号。</p>
+                </div>
+                <div class="ui_dialog_btn">
+                    <button onclick="btnClose()">关闭</button>
+                    <button onclick="btnClose()">重新输入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            // 1rem 20px
+            window.onload = function(){
+                getRem(750,20);
+            };
+            window.onresize = function(){
+                getRem(750,20)
+            };
+            function getRem(pwidth,prem){
+                var html = document.getElementsByTagName("html")[0];
+                var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+                html.style.fontSize = oWidth/pwidth*prem + "px";
+            }
+            //手机号校验
+            function isPhoneNo(value) {
+                return /^1\d{10}$/.test(value);
+            };
+            // 显示弹窗 
+            function dialogShow(){
+                //获取电话号
+                var phoneNo = document.getElementById('ipt-tel').value;
+                if(!isPhoneNo(phoneNo)){
+                    document.getElementById('dialogWrap').style.display = '-webkit-box';
+                }else{
+                    return;
+                }
+            };
+            //关闭弹窗
+            function btnClose(){
+                document.getElementById('dialogWrap').style.display = 'none';
+            };
+        </script>
+</body>
+</html>
