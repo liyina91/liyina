@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>我要贷款</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="ui_wrap">
+        <header class="ui_header">
+            <a class="ui_arrow"></a>
+            <div>贷款俱乐部</div>
+        </header>
+        <div class="page_info">
+            <dl class="warm_tip">
+                <dt>温馨提示</dt>
+                <dd>以下贷款产品，若在蚂蚁地推有对应的产品，请自行获取二维码扫码申请，本文内申请或获取的二维码推广均无有效佣金，感谢您的支持和理解！</dd>
+            </dl>
+            
+            <dl class="loan_center">
+                <dt>贷款中心</dt>
+                <dd>
+                    <ul class="loan_list">
+                        <li class="border_green">
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li class="border_blue">
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li class="border_pink">
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li class="border_violet">
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>有信用卡、征信良好额度3000-30000</p>
+                            </a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+
+            <dl class="loan_credit">
+                <dt>信用卡贷款</dt>
+                <dd>
+                    <p class="line_title">有符合条件的信用卡即可申请</p>
+                    <ul class="card_list">
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <img src="images/logo@2x.png" alt="">
+                                <p>广发  财智金</p>
+                            </a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <script>
+            // 1rem 20px
+            window.onload = function(){
+                getRem(750,20);
+            };
+            window.onresize = function(){
+                getRem(750,20)
+            };
+            function getRem(pwidth,prem){
+                var html = document.getElementsByTagName("html")[0];
+                var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+                html.style.fontSize = oWidth/pwidth*prem + "px";
+            }
+    </script>
+</body>
+</html>

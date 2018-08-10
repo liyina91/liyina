@@ -1,0 +1,131 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+:focus {
+	outline: 1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+    display:block;
+}
+
+ul {
+    list-style:none;
+}
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+h1,h2{font-weight: normal;}
+body{
+    font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+    font-size:1.5rem;
+    line-height:1.4;
+    color: #333;
+    background: #FFF0D3;
+    -webkit-user-select:none;
+    -webkit-text-size-adjust:100%;
+}
+img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  -webkit-appearance: none;
+  outline: 0; }
+
+button {
+  -webkit-appearance: none;
+  border: 0;
+  background: none; }
+
+a {-webkit-touch-callout: none;text-decoration: none;}
+a,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+input{-webkit-appearance: none;box-shadow: none;border:none;outline:0;}
+input::-webkit-input-placeholder{font-size:1.4rem;color: #C9B9A5;}
+/* 页面样式 */
+.ui_wrap{
+    min-width: 320px;
+}
+.ui_header{
+    position: relative;
+    font-size: 1.7rem;
+    color: #333;
+    text-align: center;
+    height:4.4rem;
+    line-height: 4.4rem;
+    background: #fff;
+}
+.ui_arrow{position:absolute;top:0;left:0;width:5.2rem;height:100%;background: url(images/arrow.png) no-repeat center center;background-size: 2rem 2rem;}
+.page_info{padding: 2rem 1rem;}
+.warm_tip{height:16.5rem;background: url(images/bg_01@3x.png) no-repeat center top;background-size: 100% 16.5rem;}
+.warm_tip dt{width:9.7rem;height:2.8rem;line-height:2.8rem;margin-left:1rem;color:#fff;
+    background: url(images/smail@3x.png) no-repeat .7rem center;background-size:1.5rem 1.6rem; 
+    margin-bottom: .7rem;padding-left: 2.8rem;box-sizing: border-box;
+}
+.warm_tip dd{padding: 2.1rem 1.7rem;color: #6B2F10;text-align: justify;}
+.loan_center,.loan_credit{padding: 2.7rem 0;margin-top:1rem;
+    background: #FFFFFF url(images/bg_02@3x.png) no-repeat 90% top;background-size: 5.7rem 3.2rem;
+    box-shadow: 0 0 8px 0 #FFD076;
+    border-radius: 8px;}
+.loan_center ul,.loan_credit ul{display:-webkit-flex;flex-wrap: wrap;justify-content:space-between;}
+.loan_center li,.loan_credit li{width: 30%;display:-webkit-flex;flex-direction:column;justify-content:center;text-align: center;}
+.loan_center li a{display: block;font-size: .9rem;color: #4D4D4D;}
+.loan_credit li a{display: block;font-size: 1.2rem;color: #333333;}
+.loan_center dt,.loan_credit dt{
+    display:inline-block;padding:0 1.4rem 0 3.5rem;background: #FB6E52 url(images/icon@3x.png) no-repeat 1.4rem center;
+    color:#fff;font-weight: bold;font-size: 1.7rem;background-size: 1.6rem 1.6rem;
+    height:3rem;line-height:3rem;box-shadow: 0 2px 4px 0 rgba(251,110,82,0.30);border-radius:0 3rem 3rem 0;}
+.loan_list img{display: block;width:6rem;height:6.2rem;margin-bottom: .6rem;}
+.card_list img{display: block;width:7rem;height: 7rem;margin-bottom: .8rem;}
+.loan_list{padding:2rem 2rem 0 2rem;}
+.loan_list li{
+    height:11rem;padding:0.5rem;border: 2px solid rgba(248,189,1,0.50);
+    border-radius: 7px;margin-bottom: 1.5rem;box-sizing: border-box;
+}
+.card_list{padding: 0 4.3rem .7rem;margin-bottom:-2rem;}
+.card_list li{margin-bottom: 2rem;}
+.line_title{position: relative;margin:2.3rem auto 1.9rem;text-align: center;font-size: 1.3rem;
+    color: #6B2F10;}
+.line_title::before,.line_title::after{content: '';display: inline-block;vertical-align: middle;
+    margin:0 .5rem;height:1px;width:2rem;background: #6B2F10;}
+/* 边框颜色 */
+.border_green{border-color:rgba(134,207,45,0.51)!important;}
+.border_blue{border-color:rgba(5,166,233,0.51)!important;}
+.border_pink{border-color:rgba(251,148,108,0.50)!important;}
+.border_violet{border-color: rgba(99,136,255,0.50)!important;}
