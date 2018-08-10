@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>我要贷款</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{background: #fff;}
+        img{display: block;width:100%;margin:0 auto;}
+    </style>
+
+</head>
+<body>
+    <div class="ui_wrap">
+        <a href="loanCenter.html" class="ui_arrow"></a>
+        <img src="images/bg_01@3x.png" alt="">
+    </div>
+    <script>
+            // 1rem 20px
+            window.onload = function(){
+                getRem(750,20);
+            };
+            window.onresize = function(){
+                getRem(750,20)
+            };
+            function getRem(pwidth,prem){
+                var html = document.getElementsByTagName("html")[0];
+                var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+                html.style.fontSize = oWidth/pwidth*prem + "px";
+            }
+    </script>
+</body>
+</html>

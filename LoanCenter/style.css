@@ -91,7 +91,9 @@ input::-webkit-input-placeholder{font-size:1.4rem;color: #C9B9A5;}
     line-height: 4.4rem;
     background: #fff;
 }
-.ui_arrow{position:absolute;top:0;left:0;width:5.2rem;height:100%;background: url(images/arrow.png) no-repeat center center;background-size: 2rem 2rem;}
+.ui_arrow{position:absolute;top:0;left:0;width:5.2rem;height:4.4rem;}
+.ui_arrow::before{content: '';position: absolute;top:50%;left:50%;width:1.5rem;height:1.5rem;border:4px solid #333333;
+    -webkit-transform:translate(-50%,-50%) rotate(45deg);box-sizing: border-box;transform-origin: 50% 50%;border-width:0 0 2px 2px;}
 .page_info{padding: 2rem 1rem;}
 .warm_tip{height:16.5rem;background: url(images/bg_01@3x.png) no-repeat center top;background-size: 100% 16.5rem;}
 .warm_tip dt{width:9.7rem;height:2.8rem;line-height:2.8rem;margin-left:1rem;color:#fff;
